@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/countries_list">
+
+    <fragment
+        android:id="@+id/countries_list"
+        android:name="net.gostartups.myapplication.FirstFragment"
+        android:label="FirstFragment">
+
+        <action
+            android:id="@+id/action_countries_list_to_country_detail"
+            app:destination="@id/country_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/country_detail"
+        android:name="net.gostartups.myapplication.CountryDetail"
+        android:label="CountryDetail"
+        tools:layout="@layout/country_detail" >
+
+        <action
+            android:id="@+id/action_country_detail_to_countries_list"
+            app:destination="@id/countries_list" />
+
+<!--        <argument-->
+<!--            android:name="booksArg"-->
+<!--            app:argType="string" />-->
+    </fragment>
+</navigation>
